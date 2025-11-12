@@ -2,13 +2,13 @@
 
 Projeto em Node.js + Express desenvolvido por **Leandro Bragaça da Silva** para praticar CRUD e programação assíncrona (armazenamento em memória).
 
-## 🧠 Objetivo
+## Objetivo
 Este projeto tem como objetivo consolidar o entendimento sobre **programação assíncrona** em Node.js, utilizando **Promises**, **async/await** e **callbacks**, aplicados em um sistema simples de gerenciamento de tarefas.
 
-## ⚙️ Requisitos
+## Requisitos
 - Node.js v14+ (recomendado v16+)
 
-## 🚀 Instalação
+## Instalação
 
 1. Clone ou baixe os arquivos deste repositório.
 2. No diretório do projeto, execute o comando:
@@ -31,14 +31,14 @@ npm run dev
 
 O servidor rodará em `http://localhost:3000` por padrão.
 
-## 📡 Rotas Disponíveis
+## Rotas Disponíveis
 
-### 🔹 Listar tarefas
+### Listar tarefas
 `GET /tasks`
 
 Retorna todas as tarefas cadastradas.
 
-### 🔹 Criar tarefa
+### Criar tarefa
 `POST /tasks`
 
 Cria uma nova tarefa.
@@ -51,7 +51,7 @@ Cria uma nova tarefa.
 }
 ```
 
-### 🔹 Atualizar tarefa
+### Atualizar tarefa
 `PUT /tasks/:id`
 
 Atualiza uma tarefa existente.
@@ -63,16 +63,16 @@ Atualiza uma tarefa existente.
 }
 ```
 
-### 🔹 Deletar tarefa
+### Deletar tarefa
 `DELETE /tasks/:id`
 
 Remove uma tarefa pelo ID.
 
-## 🧩 Observações
+## Observações
 - As tarefas são armazenadas em **memória**, ou seja, os dados são apagados quando o servidor é reiniciado.
 - O código foi estruturado para fácil migração futura para um banco de dados real.
 
-## 🧑‍💻 Autor
+## Autor
 **Leandro Bragaça da Silva**  
 Projeto desenvolvido como parte prática de estudo em **Node.js e Express**.
 
