@@ -1,79 +1,98 @@
-# Sistema Simplificado de Gerenciamento de Tarefas (Pronto para entrega)
+Sistema Simplificado de Gerenciamento de Tarefas
 
-Projeto em Node.js + Express — armazenamento em memória (array) — demonstração de programação assíncrona.
+Autor: Leandro Bragança da Silva
+Tecnologias: Node.js • Express • Programação Assíncrona
 
-## O que foi adicionado a esta versão
-- Validação de entrada com `express-validator`
-- Testes automatizados com `jest` e `supertest`
-- Dockerfile para execução em container
-- Export do `app` para permitir testes
-- Documentação melhorada e exemplos de uso (Postman / cURL)
+Sobre o Projeto
 
-## Requisitos
-- Node.js 14+ recomendado
-- npm
+Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimentos essenciais de backend utilizando Node.js, Express e os principais conceitos de programação assíncrona (callbacks, Promises e async/await).
 
-## Instalação
-1. Extraia o projeto ou abra o diretório.
-2. Instale dependências:
-   ```
-   npm install
-   ```
+A ideia aqui é simples e poderosa: construir uma API capaz de criar, listar, atualizar e deletar tarefas, tudo de forma clara, organizada e acessível — ideal para quem está começando no desenvolvimento backend, mas já quer aplicar boas práticas.
 
-## Executando
-- Em modo produção:
-  ```
-  npm start
-  ```
-- Em modo desenvolvimento (requer nodemon):
-  ```
-  npm run dev
-  ```
-- Executar testes:
-  ```
-  npm test
-  ```
+Esse trabalho representa um passo importante no aprendizado do desenvolvimento de APIs e marca o início de uma jornada mais madura no mundo do Node.js.
 
-O servidor roda por padrão em `http://localhost:3000`.
+Objetivo da Aplicação
 
-## Rotas (API)
-- `GET /tasks` — lista todas as tarefas.
-- `POST /tasks` — cria uma tarefa.
-  - Body JSON: `{ "title": "Comprar leite", "status": "pendente" }`
-  - `status` válido: `pendente`, `em andamento`, `concluida`
-- `PUT /tasks/:id` — atualiza uma tarefa (title e/ou status).
-- `DELETE /tasks/:id` — remove uma tarefa.
+Criar um sistema básico que permita:
 
-## Exemplos (cURL)
-1. Criar tarefa:
-   ```
-   curl -X POST http://localhost:3000/tasks -H "Content-Type: application/json" -d '{"title":"Comprar leite"}'
-   ```
-2. Listar:
-   ```
-   curl http://localhost:3000/tasks
-   ```
-3. Atualizar:
-   ```
-   curl -X PUT http://localhost:3000/tasks/1 -H "Content-Type: application/json" -d '{"status":"concluida"}'
-   ```
-4. Deletar:
-   ```
-   curl -X DELETE http://localhost:3000/tasks/1
-   ```
+Criar uma nova tarefa
 
-## Docker
-- Build:
-  ```
-  docker build -t task-manager .
-  ```
-- Run:
-  ```
-  docker run -p 3000:3000 task-manager
-  ```
+Listar todas as tarefas
 
-## Entrega
-Inclua este diretório compactado (`task-manager.zip`) com o código-fonte, `README.md` e os testes.
+Atualizar uma tarefa existente
 
-## Autor
-Leandro Bragaça da Silva
+Excluir uma tarefa
+
+As tarefas são armazenadas em memória, seguindo a proposta do projeto: foco no código, na lógica e na estrutura do backend.
+
+Conceitos Praticados
+
+Estruturação de uma aplicação Express
+
+Criação de rotas REST
+
+Uso de métodos HTTP (GET, POST, PUT, DELETE)
+
+Manipulação de dados em memória
+
+Aplicação real de programação assíncrona
+
+Organização de controllers e lógica de negócio
+
+Tratamento simples de erros
+
+Como Executar o Projeto
+1️⃣ Instale o Node.js
+
+Baixe em: https://nodejs.org/
+
+2️⃣ Clone ou baixe o repositório
+git clone https://github.com/Leandrosilva20/sistema-gerenciamento-tarefas
+
+3️⃣ Instale as dependências
+npm install
+
+4️Inicie o servidor
+npm start
+
+
+O servidor iniciará em:
+
+http://localhost:3000
+
+Rotas Disponíveis
+1. Listar todas as tarefas
+GET /tasks
+
+2. Criar uma nova tarefa
+POST /tasks
+
+
+Exemplo de JSON:
+
+{
+  "title": "Enviar relatório",
+  "status": "pendente"
+}
+
+3. Atualizar uma tarefa existente
+PUT /tasks/:id
+
+
+Exemplo de JSON:
+
+{
+  "title": "Relatório enviado",
+  "status": "concluída"
+}
+
+4. Deletar uma tarefa
+DELETE /tasks/:id
+
+Considerações Finais
+
+Este projeto foi construído com dedicação para consolidar conhecimentos e demonstrar domínio inicial sobre o desenvolvimento backend. Cada rota, cada função e cada trecho de código contribuiu para um aprendizado prático e real — indo muito além da teoria.
+
+Agradeço a todos que acompanham essa caminhada e, principalmente, aos professores que incentivam a explorar, errar, corrigir e evoluir.
+
+“Aprender a programar é aprender a pensar. Cada pequeno projeto é uma porta aberta para um mundo maior.”
