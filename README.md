@@ -1,10 +1,10 @@
-Sistema de Gerenciamento de Tarefas
-
+SISTEMA DE GERENCIAMENTO DE TAREFAS
 Autor: Leandro Bragaça da Silva
 
-Este projeto é um sistema simples de gerenciamento de tarefas desenvolvido em Node.js + Express, com armazenamento em um arquivo JSON. O objetivo é demonstrar a criação de rotas, controllers, estrutura MVC e manipulação de dados.
+Descrição
+Este projeto é um sistema simples de gerenciamento de tarefas desenvolvido com Node.js e Express. Ele permite criar, listar, atualizar e deletar tarefas utilizando armazenamento em um arquivo JSON.
 
-Tecnologias Utilizadas
+Tecnologias utilizadas
 
 Node.js
 
@@ -12,73 +12,67 @@ Express
 
 File System (fs)
 
-Nodemon
-
 JavaScript
 
-Estrutura do Projeto
-Task-manager/
-│── controllers/
-│     └── taskController.js
-│── routes/
-│     └── taskRoutes.js
-│── data/
-│     └── tasks.json
-│── index.js
-│── package.json
-│── README.md
+Nodemon (opcional)
 
-Como Rodar o Projeto
-1. Instale as dependências
+Estrutura do projeto
+Task-manager/
+controllers/
+taskController.js
+routes/
+taskRoutes.js
+data/
+tasks.json
+index.js
+package.json
+README.md
+
+Como instalar
+
+Abra o terminal na pasta do projeto
+
+Execute o comando:
 npm install
 
-2. Inicie o servidor
+Como iniciar o servidor
+Execute:
 node index.js
 
-
-Se tudo estiver correto, aparecerá:
-
+Se estiver funcionando, aparecerá:
 Servidor rodando na porta 3000
 
-Rotas Disponíveis
-Listar todas as tarefas
+Rotas do sistema
 
+Listar todas as tarefas
 GET /tasks
 
-Criar nova tarefa
-
+Criar uma nova tarefa
 POST /tasks
-Body JSON:
-
+Body JSON exemplo:
 {
-  "title": "Título da tarefa",
-  "description": "Descrição da tarefa"
+"title": "Primeira tarefa",
+"description": "Descrição da tarefa"
 }
 
-Buscar tarefa pelo ID
-
+Buscar uma tarefa por ID
 GET /tasks/:id
 
-Atualizar tarefa
-
+Atualizar uma tarefa
 PUT /tasks/:id
 
-Deletar tarefa
-
+Deletar uma tarefa
 DELETE /tasks/:id
 
-Objetivo do Projeto
-
-Este sistema foi desenvolvido como parte do estudo de:
-
-Estrutura MVC
-
-CRUD básico
-
-Manipulação de JSON
+Objetivo do projeto
+Este projeto foi criado para treinar:
 
 Criação de API com Express
 
-Autor
+Rotas CRUD
 
-Leandro Bragaça da Silva
+Manipulação de arquivos JSON
+
+Programação assíncrona
+
+Organização MVC básica
