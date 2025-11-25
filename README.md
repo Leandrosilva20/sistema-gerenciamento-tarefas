@@ -1,99 +1,84 @@
-Sistema Simplificado de Gerenciamento de Tarefas
+Sistema de Gerenciamento de Tarefas
 
-Autor: Leandro Bragança da Silva
-Tecnologias: Node.js • Express • Programação Assíncrona
+Autor: Leandro Bragaça da Silva
 
-Sobre o Projeto
+Este projeto é um sistema simples de gerenciamento de tarefas desenvolvido em Node.js + Express, com armazenamento em um arquivo JSON. O objetivo é demonstrar a criação de rotas, controllers, estrutura MVC e manipulação de dados.
 
-Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conhecimentos essenciais de backend utilizando Node.js, Express e os principais conceitos de programação assíncrona (callbacks, Promises e async/await).
+Tecnologias Utilizadas
 
-A ideia aqui é simples e poderosa: construir uma API capaz de criar, listar, atualizar e deletar tarefas, tudo de forma clara, organizada e acessível — ideal para quem está começando no desenvolvimento backend, mas já quer aplicar boas práticas.
+Node.js
 
-Esse trabalho representa um passo importante no aprendizado do desenvolvimento de APIs e marca o início de uma jornada mais madura no mundo do Node.js.
+Express
 
-Objetivo da Aplicação
+File System (fs)
 
-Criar um sistema básico que permita:
+Nodemon
 
-Criar uma nova tarefa
+JavaScript
 
-Listar todas as tarefas
+Estrutura do Projeto
+Task-manager/
+│── controllers/
+│     └── taskController.js
+│── routes/
+│     └── taskRoutes.js
+│── data/
+│     └── tasks.json
+│── index.js
+│── package.json
+│── README.md
 
-Atualizar uma tarefa existente
-
-Excluir uma tarefa
-
-As tarefas são armazenadas em memória, seguindo a proposta do projeto: foco no código, na lógica e na estrutura do backend.
-
-Conceitos Praticados
-
-Estruturação de uma aplicação Express
-
-Criação de rotas REST
-
-Uso de métodos HTTP (GET, POST, PUT, DELETE)
-
-Manipulação de dados em memória
-
-Aplicação real de programação assíncrona
-
-Organização de controllers e lógica de negócio
-
-Tratamento simples de erros
-
-Como Executar o Projeto
-
-1️⃣ Instale o Node.js
-
-Baixe em: https://nodejs.org/
-
-2️⃣ Clone ou baixe o repositório
-git clone https://github.com/Leandrosilva20/sistema-gerenciamento-tarefas
-
-3️⃣ Instale as dependências
+Como Rodar o Projeto
+1. Instale as dependências
 npm install
 
-4️Inicie o servidor
-npm start
+2. Inicie o servidor
+node index.js
 
 
-O servidor iniciará em:
+Se tudo estiver correto, aparecerá:
 
-([http://localhost:3000/tasks](http://localhost:3000/tasks))
+Servidor rodando na porta 3000
 
 Rotas Disponíveis
-1. Listar todas as tarefas
+Listar todas as tarefas
+
 GET /tasks
 
-2. Criar uma nova tarefa
+Criar nova tarefa
+
 POST /tasks
-
-
-Exemplo de JSON:
+Body JSON:
 
 {
-  "title": "Enviar relatório",
-  "status": "pendente"
+  "title": "Título da tarefa",
+  "description": "Descrição da tarefa"
 }
 
-3. Atualizar uma tarefa existente
+Buscar tarefa pelo ID
+
+GET /tasks/:id
+
+Atualizar tarefa
+
 PUT /tasks/:id
 
+Deletar tarefa
 
-Exemplo de JSON:
-
-{
-  "title": "Relatório enviado",
-  "status": "concluída"
-}
-
-4. Deletar uma tarefa
 DELETE /tasks/:id
 
-Considerações Finais
+Objetivo do Projeto
 
-Este projeto foi construído com dedicação para consolidar conhecimentos e demonstrar domínio inicial sobre o desenvolvimento backend. Cada rota, cada função e cada trecho de código contribuiu para um aprendizado prático e real — indo muito além da teoria.
+Este sistema foi desenvolvido como parte do estudo de:
 
-Agradeço a todos que acompanham essa caminhada e, principalmente, aos professores que incentivam a explorar, errar, corrigir e evoluir.
+Estrutura MVC
 
-“Aprender a programar é aprender a pensar. Cada pequeno projeto é uma porta aberta para um mundo maior.”
+CRUD básico
+
+Manipulação de JSON
+
+Criação de API com Express
+
+Autor
+
+Leandro Bragaça da Silva
